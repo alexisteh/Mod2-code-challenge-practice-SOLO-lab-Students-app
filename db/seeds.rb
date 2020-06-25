@@ -15,4 +15,4 @@ end
 
 12.times do 
     Student.create(name: Faker::Name.name, major: Faker::Educator.subject, age: rand(18..60), instructor: Instructor.all.sample)
-end
+end 

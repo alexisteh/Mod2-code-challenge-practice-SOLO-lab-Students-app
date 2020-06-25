@@ -1,0 +1,14 @@
+<h1><%=@instructor.name%></h1>
+
+<br/>
+Students (sorted alphabetically by first name): 
+<ul>
+    <%@instructor.sort_students.each do |student|%>
+        <li><%=link_to student.name, student_path(student)%>
+        </li>
+    <%end%>
+</ul> 
+<br/>
+Average Student Age: <%=@instructor.average_student_age%>
+<br/>
+<%=link_to "Back to all instructors", instructors_path%> 

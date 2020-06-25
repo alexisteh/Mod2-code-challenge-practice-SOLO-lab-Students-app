@@ -1,0 +1,18 @@
+<h1>Make a new student!</h1>
+
+<%if flash[:errors]%>
+    <ul> 
+        <%flash[:errors].each do |error|%>
+        <li><%=error%></li>
+        <%end%>
+    </ul>
+<%end%>
+
+<%=form_for @student do |f|%>
+    <%=f.label :name%> 
+    <%f.text_field :name %>
+    <%=f.label :major%> 
+    <%f.text_field :age %>
+
+
+<%end%>
